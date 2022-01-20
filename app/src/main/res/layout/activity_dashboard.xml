@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    android:id="@+id/drawer_layout"
+    tools:context=".Dashboard">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ECEBEB">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ECEBEB"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ECEBEB"
+
+                >
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="25pt"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/colorPrimary"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25pt"
+                    android:layout_below="@+id/toolbar"
+                    android:background="@color/colorPrimary" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/Card1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_margin="5pt"
+                    app:cardCornerRadius="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/collegestudenttext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5pt"
+                            android:background="#F6F5F5"
+                            android:gravity="center"
+                            android:padding="3pt"
+                            android:text="Dash Board"
+                            android:fontFamily="serif"
+                            android:textColor="#000"
+                            android:textSize="10pt" />
+
+                        <LinearLayout
+                            android:id="@+id/yearback"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/collegestudenttext"
+                            android:layout_marginLeft="5pt"
+                            android:orientation="horizontal"
+
+                            >
+                            <LinearLayout
+                                android:id="@+id/Post"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/collegestudenttext"
+                                android:layout_marginLeft="5pt"
+                                android:orientation="horizontal"
+                                android:layout_marginRight="5pt"
+                                >
+                                <TextView
+                                    android:id="@+id/PostNumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:layout_marginBottom="5pt"
+                                    android:padding="3pt"
+                                    android:text="00"
+                                    android:fontFamily="serif"
+                                    android:textColor="#000"
+                                    android:textSize="10pt" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:layout_marginBottom="5pt"
+                                    android:text=" Post"
+
+                                    android:fontFamily="serif"
+                                    android:textColor="#000"
+                                    android:textSize="10pt" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/collegestudenttext"
+                                android:layout_marginLeft="5pt"
+                                android:orientation="horizontal"
+                                android:layout_marginRight="5pt"
+                                >
+                                <TextView
+                                    android:id="@+id/AnswerNumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:layout_marginBottom="5pt"
+                                    android:padding="3pt"
+                                    android:text="00"
+                                    android:fontFamily="serif"
+                                    android:textColor="#000"
+                                    android:textSize="10pt" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:layout_marginBottom="5pt"
+                                    android:text=" Answer"
+                                    android:fontFamily="serif"
+                                    android:textColor="#000"
+                                    android:textSize="10pt" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/Likeback"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/yearback"
+                            android:layout_marginLeft="5pt"
+                            android:visibility="gone"
+                            android:orientation="horizontal"
+
+                            >
+                            <LinearLayout
+                                android:id="@+id/Like"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/collegestudenttext"
+                                android:layout_marginLeft="5pt"
+                                android:orientation="horizontal"
+                                android:layout_marginRight="5pt"
+                                >
+                                <TextView
+                                    android:id="@+id/LkeNumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:layout_marginBottom="5pt"
+                                    android:padding="3pt"
+                                    android:text="00"
+                                    android:fontFamily="serif"
+                                    android:textColor="#000"
+                                    android:textSize="10pt" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:layout_marginBottom="5pt"
+                                    android:text=" Like"
+
+                                    android:fontFamily="serif"
+                                    android:textColor="#000"
+                                    android:textSize="10pt" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/collegestudenttext"
+                                android:layout_marginLeft="5pt"
+                                android:orientation="horizontal"
+                                android:layout_marginRight="5pt"
+                                >
+                                <TextView
+                                    android:id="@+id/unlikenumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:layout_marginBottom="5pt"
+                                    android:padding="3pt"
+                                    android:text="00"
+                                    android:fontFamily="serif"
+                                    android:textColor="#000"
+                                    android:textSize="10pt" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:layout_marginBottom="5pt"
+                                    android:text=" Dislike"
+                                    android:fontFamily="serif"
+                                    android:textColor="#000"
+                                    android:textSize="10pt" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/progressBar3"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="25pt"
+                            android:layout_weight="1" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/outofboxtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Card1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="6pt"
+                    android:layout_marginBottom="3pt"
+                    android:text="Work Space"
+                    android:textColor="#000"
+                    android:textSize="10pt" />
+
+
+                <androidx.cardview.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/Card2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/outofboxtext"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginBottom="3pt"
+                    android:layout_marginRight="5pt"
+                    android:layout_marginLeft="5pt"
+                    app:cardCornerRadius="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            >
+                            <TextView
+                                android:id="@+id/Query_menu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#0BCBFF"
+                                android:text="Query"
+                                android:textSize="10pt"
+                                android:gravity="center"
+                                android:paddingTop="5pt"
+                                android:paddingBottom="5pt"
+                                android:onClick="QueryClick"
+                                android:textColor="#fff"
+                                android:textStyle="bold"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            >
+                            <TextView
+                                android:id="@+id/Post_menu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#fff"
+                                android:text="Post"
+                                android:textSize="10pt"
+                                android:gravity="center"
+                                android:onClick="PostClick"
+                                android:paddingTop="5pt"
+                                android:paddingBottom="5pt"
+                                android:textColor="#000"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/Recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Card2"
+                    android:layout_marginTop="2pt"
+                    android:layout_marginLeft="5pt"
+                    android:layout_marginRight="5pt"
+                    android:fadeScrollbars="true" />
+
+                <ProgressBar
+                    android:layout_below="@+id/Card2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10pt"
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/AddButton"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="5pt"
+            android:onClick="NewPostClick"
+            android:layout_marginBottom="5pt"
+            android:background="@drawable/addbtn" />
+        <RelativeLayout
+            android:id="@+id/NewPostPage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DF000000"
+            android:padding="10pt"
+            android:onClick="DoNothing"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="#fff"
+                >
+                <LinearLayout
+                    android:id="@+id/Topicback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#F1F1F1"
+                    android:padding="3pt"
+                    android:paddingStart="5pt"
+                    android:paddingEnd="5pt"
+                    >
+                    <TextView
+                        android:id="@+id/TopicText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Topic : "
+                        android:fontFamily="serif"
+                        android:textColor="#000"
+                        android:textSize="10pt" />
+
+                    <EditText
+                        android:id="@+id/NewPostTopic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Topic Name"
+                        android:visibility="visible"
+                        android:fontFamily="serif"
+                        android:textColor="#000"
+                        android:textSize="10pt" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/discription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/Topicback"
+                    >
+                    <EditText
+                        android:id="@+id/NewpostDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Description"
+                        android:layout_marginLeft="5pt"
+                        android:layout_marginTop="5pt"
+                        android:visibility="visible"
+                        android:layout_marginBottom="5pt"
+                        android:layout_marginRight="5pt"
+                        android:fontFamily="serif"
+                        android:textColor="#000"
+                        android:textSize="9pt"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/btnback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/discription"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="3pt"
+                    android:layout_marginRight="3pt"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginRight="2pt"
+                        android:layout_marginBottom="5pt"
+                        >
+                        <TextView
+                            android:id="@+id/Edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#0BCBFF"
+                            android:text="Upload Post"
+                            android:textSize="10pt"
+                            android:gravity="center"
+                            android:paddingTop="5pt"
+                            android:paddingBottom="5pt"
+                            android:onClick="newPostUpdate"
+                            android:textColor="#fff"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="2pt"
+                        >
+                        <TextView
+                            android:id="@+id/remove"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#B8B3B3"
+                            android:text="Back"
+                            android:textSize="10pt"
+                            android:gravity="center"
+                            android:onClick="NewPostBackClick"
+                            android:paddingTop="5pt"
+                            android:paddingBottom="5pt"
+                            android:textColor="#000"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <ProgressBar
+                android:id="@+id/progressBar4"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/Loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:background="#fff">
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logowhite" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/likeback"
+            android:orientation="horizontal"
+            android:layout_marginLeft="3pt"
+            android:layout_marginRight="3pt"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginRight="2pt"
+                android:layout_marginBottom="5pt"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Career  "
+                    android:textSize="15pt"
+                    android:gravity="center"
+                    android:paddingTop="5pt"
+                    android:fontFamily="serif"
+                    android:paddingBottom="5pt"
+                    android:textColor="#0BCBFF"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guidance"
+                    android:textSize="15pt"
+                    android:gravity="center"
+                    android:fontFamily="serif"
+                    android:paddingTop="5pt"
+                    android:paddingBottom="5pt"
+                    android:textColor="#E8C49C"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationview"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:visibility="visible"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

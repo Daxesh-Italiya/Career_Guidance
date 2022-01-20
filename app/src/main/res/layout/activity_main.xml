@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/loginlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/loginback"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="80pt"
+                android:layout_height="80pt"
+                android:layout_marginRight="10pt"
+                android:background="@drawable/logowhite" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/Otpbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10pt"
+                android:layout_marginRight="10pt"
+                android:layout_marginBottom="20pt"
+                android:paddingTop="5pt"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/usermobilenumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/btnback"
+                    android:fontFamily="serif"
+                    android:inputType="phone"
+                    android:paddingLeft="10pt"
+                    android:paddingTop="7pt"
+                    android:paddingBottom="4pt"
+                    android:textColor="#116507"
+                    android:textColorHint="#77BA6F"
+                    android:textSize="11pt"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="5pt"
+                    android:layout_marginLeft="5pt"
+                    android:background="#fff"
+                    android:paddingLeft="3pt"
+                    android:paddingRight="5pt"
+                    android:text="Enter Mobile Number"
+                    android:textColor="#000"
+                    android:textSize="8pt" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/rgexit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10pt"
+        android:layout_marginBottom="10pt"
+        android:background="@color/colorPrimary"
+        android:fontFamily="serif"
+        android:onClick="OnExit"
+        android:text="Exit"
+        android:textColor="#fff"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/rgnext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10pt"
+        android:layout_marginRight="0pt"
+        android:layout_marginBottom="10pt"
+        android:background="@color/colorPrimary"
+        android:fontFamily="serif"
+        android:onClick="OnNext"
+        android:text="Next"
+        android:textColor="#fff"
+        android:textSize="10pt"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/userDatalayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rgBack"
+        android:background="#B9FFFFFF"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/head"
+                    android:layout_width="match_parent"
+                    android:layout_height="25pt"
+                    android:layout_marginBottom="5pt"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:paddingTop="3pt"
+                        android:paddingBottom="3pt"
+                        android:text="Shop Registration"
+                        android:textColor="#fff"
+                        android:textSize="12pt"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Photocontainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/head"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="SelectImage">
+
+                    <ImageView
+                        android:id="@+id/photo"
+                        android:layout_width="100pt"
+                        android:layout_height="120pt"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5pt"
+                        android:layout_marginBottom="5pt"
+                        android:background="#2C2BAE66" />
+
+                    <TextView
+                        android:id="@+id/uploadtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="5pt"
+                        android:fontFamily="monospace"
+                        android:text="Upload Image"
+                        android:textColor="#000"
+                        android:textSize="11pt" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/UserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Photocontainer"
+                    android:layout_marginLeft="10pt"
+                    android:layout_marginRight="10pt"
+                    android:paddingTop="5pt"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/rgusername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/btnback"
+                        android:fontFamily="serif"
+                        android:paddingStart="10pt"
+                        android:paddingLeft="10pt"
+                        android:paddingTop="7pt"
+                        android:paddingEnd="5pt"
+                        android:paddingRight="5pt"
+                        android:paddingBottom="4pt"
+                        android:textColor="#116507"
+                        android:textColorHint="#77BA6F"
+                        android:textSize="11pt"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="6pt"
+                        android:layout_marginLeft="5pt"
+                        android:background="#fff"
+                        android:paddingLeft="3pt"
+                        android:paddingRight="5pt"
+                        android:text="Enter User Name"
+                        android:textColor="#000"
+                        android:textSize="8pt" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Mobilenummberback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/UserName"
+                    android:layout_marginLeft="10pt"
+                    android:layout_marginRight="10pt"
+                    android:paddingTop="5pt"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/rgmobilenumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/btnback"
+                        android:fontFamily="serif"
+                        android:inputType="phone"
+                        android:paddingLeft="10pt"
+                        android:paddingTop="7pt"
+                        android:paddingRight="5pt"
+                        android:paddingBottom="4pt"
+                        android:textColor="#116507"
+                        android:textColorHint="#77BA6F"
+                        android:textSize="11pt"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="6pt"
+                        android:layout_marginLeft="5pt"
+                        android:background="#fff"
+                        android:paddingLeft="3pt"
+                        android:paddingRight="5pt"
+                        android:text="Enter Mobile Number"
+                        android:textColor="#000"
+                        android:textSize="8pt" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Emailback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Mobilenummberback"
+                    android:layout_marginLeft="10pt"
+                    android:layout_marginRight="10pt"
+                    android:paddingTop="5pt"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/rgEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/btnback"
+                        android:fontFamily="serif"
+                        android:paddingLeft="10pt"
+                        android:paddingTop="7pt"
+                        android:paddingRight="5pt"
+                        android:paddingBottom="4pt"
+                        android:textColor="#116507"
+                        android:textColorHint="#77BA6F"
+                        android:textSize="11pt"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="6pt"
+                        android:layout_marginLeft="5pt"
+                        android:background="#fff"
+                        android:paddingLeft="3pt"
+                        android:paddingRight="5pt"
+                        android:text="Enter Email Id"
+                        android:textColor="#000"
+                        android:textSize="8pt" />
+
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/Experience"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Profession"
+                    android:layout_marginLeft="10pt"
+                    android:layout_marginRight="10pt"
+                    android:paddingTop="5pt"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/rgExperience"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/btnback"
+                        android:fontFamily="serif"
+                        android:inputType="number"
+                        android:paddingLeft="10pt"
+                        android:paddingTop="7pt"
+                        android:paddingRight="5pt"
+                        android:paddingBottom="4pt"
+                        android:textColor="#116507"
+                        android:textColorHint="#77BA6F"
+                        android:textSize="11pt"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="6pt"
+                        android:layout_marginLeft="5pt"
+                        android:background="#fff"
+                        android:paddingLeft="3pt"
+                        android:paddingRight="5pt"
+                        android:text="Enter Year of Experience"
+                        android:textColor="#000"
+                        android:textSize="8pt" />
+
+
+                </RelativeLayout>
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Experience"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginBottom="25pt"
+                    android:checked="true"
+                    android:gravity=""
+                    android:text="Agrre whith all tearms &amp; Condition "
+                    android:textColor="#2E0808"
+                    android:textSize="9pt" />
+
+                <RelativeLayout
+                    android:id="@+id/Profession"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Emailback"
+                    android:layout_marginLeft="10pt"
+                    android:layout_marginRight="10pt"
+                    android:paddingTop="5pt"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/rgProfession"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/btnback"
+                        android:fontFamily="serif"
+                        android:paddingLeft="10pt"
+                        android:paddingTop="7pt"
+                        android:paddingRight="5pt"
+                        android:paddingBottom="4pt"
+                        android:textColor="#116507"
+                        android:textColorHint="#77BA6F"
+                        android:textSize="11pt"
+                        android:textStyle="bold" />
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/category_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rgProfession"
+                        android:layout_marginTop="2pt"
+                        android:layout_marginLeft="10pt"
+                        android:layout_marginRight="10pt"
+                        android:fadeScrollbars="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="6pt"
+                        android:layout_marginLeft="5pt"
+                        android:background="#fff"
+                        android:paddingLeft="3pt"
+                        android:paddingRight="5pt"
+                        android:text="Enter Profession Domain"
+                        android:textColor="#000"
+                        android:textSize="8pt" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/otplayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#95000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:paddingTop="5pt"
+            android:paddingBottom="10pt"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="100pt"
+                android:layout_height="100pt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10pt"
+                android:layout_marginTop="20pt"
+                android:layout_marginRight="10pt"
+                android:layout_marginBottom="10pt"
+                android:background="@drawable/otp"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="10pt" />
+
+            <EditText
+                android:id="@+id/otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text"
+                android:layout_marginLeft="10pt"
+                android:layout_marginTop="10pt"
+                android:layout_marginRight="10pt"
+                android:background="@drawable/btnback"
+                android:inputType="number"
+                android:paddingLeft="7pt"
+                android:paddingTop="8pt"
+                android:paddingRight="5pt"
+                android:paddingBottom="5pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/otp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="-15pt"
+                android:background="#fff"
+                android:paddingLeft="3pt"
+                android:paddingRight="5pt"
+                android:text="Enter OTP"
+                android:textColor="#000"
+                android:textSize="8pt" />
+
+            <TextView
+                android:id="@+id/note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/otp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10pt"
+                android:layout_marginTop="20pt"
+                android:layout_marginRight="10pt"
+                android:layout_marginBottom="10pt"
+                android:gravity="center"
+                android:text="Otp will be Detected Automatically"
+                android:textColor="#000"
+                android:textSize="10pt" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/rgBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10pt"
+        android:layout_marginBottom="10pt"
+        android:background="@color/colorPrimary"
+        android:fontFamily="serif"
+        android:onClick="OnBackClick"
+        android:text="Back"
+        android:textColor="#fff"
+        android:textSize="10pt"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/Loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/loader" />
+    </LinearLayout>
+
+</RelativeLayout>
